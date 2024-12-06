@@ -1,0 +1,592 @@
+{
+	"type": "record",
+	"name": "RUC",
+	"fields": [
+		{
+			"name": "tipo_entidad",
+			"type": "int"
+		},
+		{
+			"name": "codigo_entidad",
+			"type": "int"
+		},
+		{
+			"name": "fecha_corte",
+			"type": {
+				"type": "int",
+				"logicalType": "date"
+			}
+		},
+		{
+			"name": "fecha_generacion",
+			"type": {
+				"type": "int",
+				"logicalType": "date"
+			}
+		},
+		{
+			"name": "comentarios",
+			"type": "string"
+		},
+		{
+			"name": "firma",
+			"type": "string"
+		},
+		{
+			"name": "palabra_clave",
+			"type": "string"
+		},
+		{
+			"name": "creditos",
+			"type": {
+				"type": "array",
+				"items": {
+					"type": "record",
+					"name": "credito",
+					"fields": [
+						{
+							"name": "identificacion_credito_entidad",
+							"type": "string"
+						},
+						{
+							"name": "tipo_identificacion",
+							"type": {
+								"type": "enum",
+								"name": "tipo_ident",
+								"symbols": [
+									"_1",
+									"_2",
+									"_3",
+									"_4",
+									"_5",
+									"_6",
+									"_7",
+									"_8",
+									"_9",
+									"_10",
+									"_11"
+								]
+							}
+						},
+						{
+							"name": "numero_identificacion",
+							"type": "string"
+						},
+						{
+							"name": "modalidad",
+							"type": {
+								"type": "enum",
+								"name": "modalidad_c",
+								"symbols": [
+									"_1",
+									"_2",
+									"_3",
+									"_4"
+								]
+							}
+						},
+						{
+							"name": "codigo_producto",
+							"type": {
+								"type": "enum",
+								"name": "productos_id",
+								"symbols": [
+									"_101",
+									"_102",
+									"_103",
+									"_104",
+									"_105",
+									"_106",
+									"_107",
+									"_108",
+									"_109",
+									"_110",
+									"_111",
+									"_112",
+									"_113",
+									"_201",
+									"_202",
+									"_203",
+									"_204",
+									"_205",
+									"_206",
+									"_207",
+									"_208",
+									"_209",
+									"_210",
+									"_211",
+									"_212",
+									"_213",
+									"_214",
+									"_215",
+									"_216",
+									"_217",
+									"_218",
+									"_219",
+									"_220",
+									"_221",
+									"_301",
+									"_302",
+									"_303",
+									"_304",
+									"_305",
+									"_306",
+									"_307",
+									"_308",
+									"_309",
+									"_310",
+									"_311",
+									"_312",
+									"_313",
+									"_314",
+									"_315",
+									"_316",
+									"_317",
+									"_318",
+									"_319",
+									"_320",
+									"_321",
+									"_322",
+									"_323",
+									"_324",
+									"_325",
+									"_326",
+									"_401",
+									"_402",
+									"_403",
+									"_404",
+									"_501",
+									"_502",
+									"_503",
+									"_504",
+									"_505",
+									"_506",
+									"_507",
+									"_508",
+									"_509",
+									"_510"
+								]
+							}
+						},
+						{
+							"name": "calidad_deudor",
+							"type": {
+								"type": "enum",
+								"name": "calidad_d",
+								"symbols": [
+									"_0"
+								]
+							}
+						},
+						{
+							"name": "fecha_desembolso",
+							"type": {
+								"type": "int",
+								"logicalType": "date"
+							}
+						},
+						{
+							"name": "fecha_vencimiento",
+							"type": [
+								{
+									"type": "int",
+									"logicalType": "date"
+								},
+								"null"
+							]
+						},
+						{
+							"name": "valor_desembolsado",
+							"type": "float"
+						},
+						{
+							"name": "frecuencia_pago_capital",
+							"type": {
+								"type": "enum",
+								"name": "frecuencia_p_c",
+								"symbols": [
+									"_0",
+									"_1",
+									"_2",
+									"_3",
+									"_4",
+									"_5",
+									"_6",
+									"_7",
+									"_8",
+									"_9"
+								]
+							}
+						},
+						{
+							"name": "frecuencia_pago_intereses",
+							"type": {
+								"type": "enum",
+								"name": "frecuencia_p_i",
+								"symbols": [
+									"_0",
+									"_1",
+									"_2",
+									"_3",
+									"_4",
+									"_5",
+									"_6",
+									"_7",
+									"_8",
+									"_9"
+								]
+							}
+						},
+						{
+							"name": "tipo_tasa",
+							"type": {
+								"type": "enum",
+								"name": "tipo_t",
+								"symbols": [
+									"ANA",
+									"CEC",
+									"CECUVR",
+									"CODR",
+									"CORRA",
+									"CRCDT",
+									"DEV",
+									"DTF",
+									"DTF180",
+									"DTF360",
+									"DTFE",
+									"DTFP",
+									"ENA",
+									"EUDO",
+									"ESTR",
+									"FS",
+									"HNA",
+									"IB1",
+									"IB3",
+									"IB6",
+									"IBE",
+									"IBR",
+									"IIBR",
+									"IPC",
+									"IPC1",
+									"IPC2",
+									"IPC3",
+									"IPC4",
+									"IPCS5",
+									"IPCS6",
+									"IPM",
+									"ITF",
+									"ITUS",
+									"LIB1",
+									"LIB2",
+									"LIB3",
+									"LIB4",
+									"LIB5",
+									"OTR",
+									"PRIM",
+									"RF5",
+									"RFC",
+									"RFD",
+									"SRN",
+									"SOF",
+									"SOF1",
+									"SOF2",
+									"SOF3",
+									"SOF6",
+									"SOF12",
+									"SSI",
+									"SNA",
+									"TBBT",
+									"TBS",
+									"TBS2",
+									"TBSA",
+									"TBSB",
+									"TBSD",
+									"TBSM",
+									"TBSS",
+									"TBST",
+									"TBTA",
+									"TCC",
+									"TDESC",
+									"TDTA",
+									"TEBR",
+									"TES",
+									"TES1",
+									"TES2",
+									"TES3",
+									"VUVR"
+								]
+							}
+						},
+						{
+							"name": "tipo_garantia",
+							"type": {
+								"type": "enum",
+								"name": "tipo_g",
+								"symbols": [
+									"_0",
+									"_1",
+									"_2",
+									"_3",
+									"_4",
+									"_5",
+									"_6",
+									"_7",
+									"_8",
+									"_9",
+									"_10",
+									"_11",
+									"_12",
+									"_13",
+									"_14",
+									"_15",
+									"_16",
+									"_17",
+									"_18"
+								]
+							}
+						},
+						{
+							"name": "moneda",
+							"type": {
+								"type": "enum",
+								"name": "moneda",
+								"symbols": [
+									"COP",
+									"UVR",
+									"USD",
+									"EUR",
+									"GBP"
+								]
+							}
+						},
+						{
+							"name": "estado_registro",
+							"type": {
+								"type": "enum",
+								"name": "estado_reg",
+								"symbols": [
+									"N000001",
+									"N000R01",
+									"N000R02",
+									"N000R03",
+									"N000R04",
+									"N000R05"
+								]
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "movimientos",
+			"type": {
+				"type": "array",
+				"items": {
+					"type": "record",
+					"name": "movimiento",
+					"fields": [
+						{
+							"name": "identificacion_credito_entidad",
+							"type": "string"
+						},
+						{
+							"name": "tipo_identificacion",
+							"type": "tipo_ident"
+						},
+						{
+							"name": "numero_identificacion",
+							"type": "string"
+						},
+						{
+							"name": "fecha_corte",
+							"type": {
+								"type": "int",
+								"logicalType": "date"
+							}
+						},
+						{
+							"name": "calificacion_credito",
+							"type": {
+								"type": "enum",
+								"name": "calificacion_c",
+								"symbols": [
+									"A",
+									"B",
+									"C",
+									"D",
+									"E"
+								]
+							}
+						},
+						{
+							"name": "estado",
+							"type": {
+								"type": "enum",
+								"name": "estado",
+								"symbols": [
+									"_0",
+									"_1",
+									"_2",
+									"_3",
+									"_4",
+									"_5",
+									"_6",
+									"_7",
+									"_8"
+								]
+							}
+						},
+						{
+							"name": "periodo_gracia",
+							"type": {
+								"type": "enum",
+								"name": "periodo_g",
+								"symbols": [
+									"_0",
+									"_1",
+									"_2",
+									"_3",
+									"_4"
+								]
+							}
+						},
+						{
+							"name": "dias_mora",
+							"type": "int"
+						},
+						{
+							"name": "tasa_interes",
+							"type": "float"
+						},
+						{
+							"name": "spread_tasa_interes",
+							"type": "float"
+						},
+						{
+							"name": "saldo_capital",
+							"type": "float"
+						},
+						{
+							"name": "saldo_intereses",
+							"type": "float"
+						},
+						{
+							"name": "saldo_otros",
+							"type": "float"
+						},
+						{
+							"name": "modelo_provisiones",
+							"type": {
+								"type": "enum",
+								"name": "modelo",
+								"symbols": [
+									"_0",
+									"_1",
+									"_2"
+								]
+							}
+						},
+						{
+							"name": "provision_prociclica",
+							"type": "float"
+						},
+						{
+							"name": "provision_contraciclica",
+							"type": "float"
+						},
+						{
+							"name": "provision_adicional_politica_entidad",
+							"type": "float"
+						},
+						{
+							"name": "provision_otros",
+							"type": "float"
+						},
+						{
+							"name": "provision_total",
+							"type": "float"
+						},
+						{
+							"name": "cuota_esperada_capital",
+							"type": "float"
+						},
+						{
+							"name": "cuota_esperada_intereses",
+							"type": "float"
+						},
+						{
+							"name": "cuota_recibida_capital",
+							"type": "float"
+						},
+						{
+							"name": "cuota_recibida_intereses",
+							"type": "float"
+						},
+						{
+							"name": "fecha_garantia",
+							"type": [
+								{
+									"type": "int",
+									"logicalType": "date"
+								},
+								"null"
+							]
+						},
+						{
+							"name": "valor_garantia",
+							"type": [
+								"float",
+								"null"
+							]
+						},
+						{
+							"name": "probabilidad_incumplimiento_credito",
+							"type": "float"
+						},
+						{
+							"name": "perdida_dado_incumplimiento",
+							"type": "float"
+						},
+						{
+							"name": "estado_registro",
+							"type": "estado_reg"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "demograficos",
+			"type": {
+				"type": "array",
+				"items": {
+					"name": "Demografico",
+					"type": "record",
+					"fields": [
+						{
+							"name": "identificacion_credito_entidad",
+							"type": "string"
+						},
+						{
+							"name": "tipo_identificacion",
+							"type": "tipo_ident"
+						},
+						{
+							"name": "numero_identificacion",
+							"type": "string"
+						},
+						{
+							"name": "clave_atributo",
+							"type": "int"
+						},
+						{
+							"name": "valor_atributo",
+							"type": "string"
+						}
+					]
+				}
+			}
+		}
+	]
+}
