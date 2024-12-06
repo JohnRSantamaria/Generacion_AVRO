@@ -1,0 +1,17 @@
+{
+	"identificacion_credito_entidad": [],
+	"tipo_identificacion": [],
+	"numero_identificacion": [],
+	"modalidad": [],
+	"codigo_producto": [],
+	"calidad_deudor": [],
+	"fecha_desembolso": [],
+	"fecha_vencimiento": [],
+	"valor_desembolsado": [],
+	"frecuencia_pago_capital": [],
+	"frecuencia_pago_intereses": [],
+	"tipo_tasa": [],
+	"tipo_garantia": [],
+	"moneda": [],
+	"estado_registro": []
+}
